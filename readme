@@ -23,7 +23,7 @@ let g:ycm_extra_conf_globlist = ['REALPATH_TO_PROJECT/*']
 
 4. A build cheetsheet at `cheetsheet.txt`
 
-5. There are serveal github action file, but onlt `ubuntu.yml` is active.
+5. There are serveal github action file, but only `ubuntu.yml` is active.
 
 
 
