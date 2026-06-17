@@ -1,22 +1,11 @@
-# cmake compile cheetsheet
+# compile
+cmake -B build -G Ninja
+cmake --build build
+cmake --install build --prefix ./install
 
-cmake -S PROJECTNAME -B build/PROJECTNAME
-cmake --build build/PROJECTNAME
-cmake --install build/PROJECTNAME --prefix ./install/PROJECTNAME
-
-cmake -S standalone/ -B build/standalone
-cmake --build build/standalone
-./build/standalone/PROJECTNAME_standalone
-cmake --install build/standalone/ --prefix ./install/standalone
-
-cmake -S test/ -B build/test
-cmake --build build/test
-ctest --test-dir ./build/test --output-on-failure
-
-cmake -S documentation/ -B build/documentation
-cmake --build build/documentation --target GenerateDocs
-open build/documentation/doxygen/html/index.html
-
-# gen ctags
-
+# ctags
 ctags -R --langmap=c++:+.cu .
+
+# create subproject
+bash script/cp_template.sh new_name
+

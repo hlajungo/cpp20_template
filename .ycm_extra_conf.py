@@ -5,6 +5,8 @@ def file_dir():
     return os.path.dirname(os.path.abspath(__file__))
 
 flags = [
+        '-I', file_dir() + '/build/_deps/doctest-src',
+        '-I', file_dir() + '/TEMPLATE/include',
         '-Wall',
         '-O3',
         '-std=c++20',
@@ -19,7 +21,6 @@ flags = [
         '-ferror-limit=10000' ,
         '-I', file_dir() + '/PROJECTNAME/include',
         '-I', file_dir() + '/PROJECTNAME/source',
-        '-I', file_dir() + '/build/test/_deps/doctest-src',
         ]
 
 def Settings ( filename, **kwargs ):
